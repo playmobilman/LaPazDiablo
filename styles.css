@@ -1,4 +1,98 @@
+/*
+version: 1.0
+autor: Matias Schmid
+idEstudiante: 147743
+email: playmobilman@gmail.com
+*/
+
+/* General - Reset */
+* { margin: 0; padding: 0; }
+.clear { clear: both; }
+img { border: 0; }
+
 body {
-    padding: 0;
-    margin: 0;
+    background: #FFFFFF;
+    font-family: 'Mallanna', sans-serif;
 }
+
+.main-container {
+    margin: 0 auto;
+    width: 1200px;
+    min-height: 100vh;
+}
+
+/* Tipografia */
+p {
+    line-height: 1.2em;
+}
+
+/* Headings */
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+}
+
+.header img {
+    width: 12%;
+}
+
+/* Links */
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul li {
+    margin-right: 1em;
+}
+
+nav ul li a {
+    padding: .3em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #252323;
+}
+
+nav ul li a:hover {
+    color: #FFFFFF;
+}
+
+nav ul li a:hover {
+    background-color: #252323;
+}
+
+/* Main content */
+
+section {
+    margin: 1em 0;
+}
+
+.hero {
+    width: 100%;
+    padding: 15em 2em 1em;
+    background: url("images/cabin.jpg") no-repeat top left;
+    background-size: cover;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.hero p {
+    width: 55%;
+    margin: .25em auto;
+    color: #FFFFFF;
+}
+
+
+/* Footer */
+
+/* Forms */
+
+/* Tables */
+
+/* Misc */
