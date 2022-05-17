@@ -69,10 +69,6 @@ nav ul li a:hover {
 
 /* Main content */
 
-section {
-    margin: 1em 0;
-}
-
 .hero {
     width: 100%;
     padding: 15em 2em 1em;
@@ -88,11 +84,68 @@ section {
     color: #FFFFFF;
 }
 
+section {
+    margin: 1em 0;
+}
+
+section h1 {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.container-promos {
+    width: 75%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section-boxPromo {
+    width: 50%
+    background: #403F4C;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.section-boxPromoGallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+} 
+
+.section-boxPromoResume {
+    display: grid;
+}
+
+
 
 /* Footer */
 
 /* Forms */
 
 /* Tables */
+table {
+    border-collapse: collapse;
+    width: 50%;
+    color: #252323;
+}
+
+table thead th {
+    background:#403F4C;
+    color: #FFFFFF;
+}
+
+table th, table td {
+    text-align: left;
+    padding: .2rem;
+}
+
+table tr:nth-child(even) { background: #ccc; }
+table tr:nth-child(odd) { background: #fafafa; }
+
+
+
+
 
 /* Misc */
