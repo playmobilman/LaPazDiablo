@@ -27,7 +27,7 @@ p {
 }
 
 /* Headings */
-.header {
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -35,7 +35,7 @@ p {
     padding: 0 1em;
 }
 
-.header img {
+header img {
     width: 12%;
 }
 
@@ -94,7 +94,7 @@ section h1 {
 }
 
 .container-promos {
-    width: 75%;
+    width: 80%;
     margin: 2rem auto;
     display: flex;
     flex-direction: row;
@@ -102,21 +102,63 @@ section h1 {
 }
 
 .section-boxPromo {
-    width: 50%
-    background: #403F4C;
+    width: 45%;
     display: flex;
     flex-flow: column wrap;
 }
 
 .section-boxPromoGallery {
     display: grid;
+    grid-auto-flow: row;
+    gap: 0.5rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-} 
-
-.section-boxPromoResume {
-    display: grid;
+    grid-template-rows: repeat(2, minmax(5rem, auto));
 }
+
+.section-boxPromoGallery .grid-item {
+    background-color: #7D8491;
+}
+
+.grid-horizontal .grid-item:nth-child(1) {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+.grid-vertical  .grid-item:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+.section-boxPromoResume h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.section-boxPromoResume p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-boxPromoValidity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section-boxPromoValidity span {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.section-boxPromoValidity button {
+    background-color: #CCC;
+    padding: 0.5rem;
+    border: 0 none;
+}
+
+
+
+
 
 
 
