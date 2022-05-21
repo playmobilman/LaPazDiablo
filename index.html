@@ -17,17 +17,19 @@
     <div class="main-container">
         <!-- Header -->
         <header>
-            <img src="images/lpd-logo.jpeg" alt="Logo La Paz del Diablo" title="La Paz del Diablo">
-            <nav class="menu">
+            <a href="#home">
+                <img src="images/lpd-logo.jpeg" alt="Logo La Paz del Diablo" title="La Paz del Diablo">
+            </a>
+            <nav>
                 <ul>
                     <li>
                         <a href="#promos">PROMOS</a>
                     </li>
                     <li>
-                        <a href="#tarifas">TARIFAS</a>
+                        <a href="#pricing">TARIFAS</a>
                     </li>
                     <li>
-                        <a href="#reservas">RESERVAS</a>
+                        <a href="#bookings">RESERVAS</a>
                     </li>
                 </ul>
             </nav>
@@ -46,7 +48,7 @@
         </section>
 
         <!-- Promos -->
-        <section>
+        <section id="promos">
             <h1 class="section-title">Promos</h1>
             <div class="container-promos">
                 <div class="section-boxPromo">
@@ -82,7 +84,8 @@
             </div>
         </section>
 
-        <section>
+        <!-- Tarifas -->
+        <section id="pricing">
             <h1 class="section-title">Tarifas</h1>
             <div class="container-pricing">
                 <!-- Samantha -->
@@ -95,7 +98,7 @@
                             Cocina,
                             Frigobar,
                             Terraza,
-                            Parrillero    
+                            Parrillero compartido  
                         </p>
                         <p class="rating">4.5 - Genial</p>
                         <div class="call-action">
@@ -178,46 +181,150 @@
             </div>
         </section>
 
+        <!-- Reservas -->
+        <section id="bookings">
+            <h1 class="section-title">Haz tu reserva ahora!</h1>
+            <div class="container-bookings">
+                <form action="#" method="post">
+                    <div class="flex-row">
+                        
+                        <!-- Datos visitante -->
+                        <div class="flex-col">
+                            <div class="flex-row between">
+                                <div class="flex-col item">
+                                    <label for="txtNombre">Nombre y apellido (*)</label>
+                                    <input type="text" id="txtNombre" required="required">
+                                </div>
+                                <div class="flex-col item">
+                                    <label for="txtQty">Cantidad de personas (*)</label>
+                                    <input type="text" id="txtQty" required="required">
+                                </div>
+                            </div>
+                            <div class="flex-row-fluid">
+                                <div class="flex-col item">
+                                    <label for="slcTipoAlojamiento">Tipo de alojamiento (*)</label>
+                                    <select name="slcTipoAlojamiento" id="slcTipoAlojamiento" required="required">
+                                        <option value="">Seleccione...</option>
+                                        <option value="1">Cabaña simple</option>
+                                        <option value="2">Cabaña duplex</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
 
+                        <!-- Forma de pago -->
+                        <div class="flex-col" style="margin-left: 1.5em; align-content: stretch;">
+                            <label for="slcTipoAlojamiento">Forma de pago</label>
+                            <div class="flex-row">
+                                <label for="rdCredit">
+                                    <input type="radio" id="rdCredit" name="payment" value="payCredit" checked>
+                                    Cr&eacute;dito
+                                </label>
+                                <label for="rdDebit">
+                                    <input type="radio" id="rdDebit" name="payment" value="payDebit" checked>
+                                    D&eacute;bito
+                                </label>
+                            </div>
+                            <div class="flex-row between">
+                                <label><input type="checkbox" id="cbox1" value="first_checkbox">Mascota</label>
+                                <button name="button">Reservar!</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <!-- <div class="flex-row">
+                        <div class="flex-col item">
+                            <label for="txtNombre">Nombre y apellido (*)</label>
+                            <input type="text" id="txtNombre" required="required">
+                        </div>
+                        <div class="flex-col item">
+                            <label for="txtQty">Cantidad de personas (*)</label>
+                            <input type="text" id="txtQty" required="required">
+                        </div>
+                        <div class="flex-col">
+                            <label for="txtQty">Forma de pago</label>
+                            <div class="flex-row">
+                                <label for="rdCredit">
+                                    <input type="radio" id="rdCredit" name="payment" value="payCredit" checked>
+                                    Cr&eacute;dito
+                                </label>
+                                <label for="rdDebit">
+                                    <input type="radio" id="rdDebit" name="payment" value="payDebit" checked>
+                                    D&eacute;bito
+                                </label>    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-row-full">
+                        <div class="flex-col item">
+                            <label for="slcTipoAlojamiento">Tipo de alojamiento (*)</label>
+                            <select name="slcTipoAlojamiento" id="slcTipoAlojamiento">
+                                <option value="-1">Seleccione...</option>
+                                <option value="1">Cabaña simple</option>
+                                <option value="2">Cabaña duplex</option>
+                            </select>
+                        </div>
+                    </div> -->
+                </form>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>fecha</th>
+                            <th>temporada</th>
+                            <th>precios</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>enero/febrero</td>
+                            <td>alta</td>
+                            <td>X3</td>
+                        </tr>
+                        <tr>
+                            <td>marzo/abril</td>
+                            <td>media</td>
+                            <td>X2.2</td>
+                        </tr>
+                        <tr>
+                            <td>mayo a Octubre</td>
+                            <td>baja</td>
+                            <td>X1</td>
+                        </tr>
+                        <tr>
+                            <td>carnaval, turismo</td>
+                            <td>alta</td>
+                            <td>X3</td>
+                        </tr>
+                        <tr>
+                            <td>vacaciones de julio</td>
+                            <td>media</td>
+                            <td>X2.2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer>
 
-
-
-        <table>
-            <thead>
-                <tr>
-                    <th>fecha</th>
-                    <th>temporada</th>
-                    <th>precios</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>enero/febrero</td>
-                    <td>alta</td>
-                    <td>X3</td>
-                </tr>
-                <tr>
-                    <td>marzo/abril</td>
-                    <td>media</td>
-                    <td>X2.2</td>
-                </tr>
-                <tr>
-                    <td>mayo a Octubre</td>
-                    <td>baja</td>
-                    <td>X1</td>
-                </tr>
-                <tr>
-                    <td>carnaval, turismo</td>
-                    <td>alta</td>
-                    <td>X3</td>
-                </tr>
-                <tr>
-                    <td>vacaciones de julio</td>
-                    <td>media</td>
-                    <td>X2.2</td>
-                </tr>
-            </tbody>
-        </table>
+        </footer>
     </div>
 </body>
 </html>

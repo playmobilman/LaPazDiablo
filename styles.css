@@ -29,6 +29,50 @@ body {
     background: #FAFAFA;
 }
 
+/* Flexbox */
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-col .item {
+    margin-bottom: 1.2rem;
+    margin-right: 1.2rem;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: flex-start;
+}
+
+.flex-row.between {
+    justify-content: space-between;
+}
+
+.flex-row.start {
+    justify-content: flex-start;
+}
+
+.flex-row.around {
+    justify-content: space-around;
+}
+
+.flex-row-fluid {
+    width: 100%;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}
+
+.flex-row-full {
+    justify-content: space-between;
+}
+
+
+.flex-row > .item {
+    margin-right: 1.2rem;
+}
 
 /* Tipografia */
 p {
@@ -41,11 +85,16 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0 1em;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #FFF;
 }
 
 header img {
-    width: 12%;
+    width: 50%;
 }
 
 /* Links */
@@ -58,7 +107,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 1em;
+    margin-left: 1em;
 }
 
 nav ul li a {
@@ -104,13 +153,22 @@ section h1 {
     margin: 2rem auto;
 }
 
-.container-promos {
-    width: 80%;
+.container-promos, .container-bookings {
+    width: 95%;
     margin: 2rem auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
+.container-bookings form {
+    width: 60%;
+}
+
+.container-bookings table {
+    width: 40%;
+}
+
 
 .container-pricing {
     width: 80%;
@@ -127,8 +185,10 @@ section h1 {
     height: 100%;
     justify-content: space-between;
     box-shadow: 0px 0px 5px 0px #2a1a1f;
+    border: 4px solid #FFF;
+    border-radius: 4px 4px 0 0;
+    padding: 3px;
 }
-
 
 .container-pricing .cabin-box img {
     object-fit: cover;
@@ -188,7 +248,7 @@ section h1 {
     grid-row: 1;
 }
 
-.grid-vertical  .grid-item:nth-child(1) {
+.grid-vertical .grid-item:nth-child(1) {
     grid-column: 1;
     grid-row: 1 / -1;
 }
@@ -229,6 +289,17 @@ section h1 {
 /* Footer */
 
 /* Forms */
+label {
+    margin-bottom: 0.5em;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 /* Tables */
 table {
