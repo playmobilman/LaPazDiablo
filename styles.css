@@ -7,12 +7,18 @@ email: playmobilman@gmail.com
 
 /* General - Reset */
 * { margin: 0; padding: 0; }
+
 .clear { clear: both; }
+
 img { border: 0; }
 
 body {
-    background: #FFFFFF;
-    font-family: 'Mallanna', sans-serif;
+    background: #fffbdb;
+    font-family: 'Pontano Sans', sans-serif;
+}
+
+section {
+    background-color: #FCFBF4;
 }
 
 .main-container {
@@ -21,57 +27,8 @@ body {
     min-height: 100vh;
 }
 
-.main-container section:nth-child(odd) {
-    background: #EAFFFD;
-}
-
-.main-container section:nth-child(even) {
-    background: #FAFAFA;
-}
-
-/* Flexbox */
-.flex-col {
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-col .item {
-    margin-bottom: 1.2rem;
-    margin-right: 1.2rem;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    align-content: flex-start;
-}
-
-.flex-row.between {
-    justify-content: space-between;
-}
-
-.flex-row.start {
-    justify-content: flex-start;
-}
-
-.flex-row.around {
-    justify-content: space-around;
-}
-
-.flex-row-fluid {
-    width: 100%;
-    flex-flow: row wrap;
-    align-content: flex-start;
-}
-
-.flex-row-full {
-    justify-content: space-between;
-}
-
-
-.flex-row > .item {
-    margin-right: 1.2rem;
+.main-container section:last-of-type {
+    background: #e8e2da;
 }
 
 /* Tipografia */
@@ -110,6 +67,10 @@ nav ul li {
     margin-left: 1em;
 }
 
+nav ul li:last-of-type {
+    margin-right: 1em;
+}
+
 nav ul li a {
     padding: .3em 1em;
     text-decoration: none;
@@ -126,7 +87,6 @@ nav ul li a:hover {
 }
 
 /* Main content */
-
 .hero {
     width: 100%;
     padding: 15em 0;
@@ -149,8 +109,9 @@ section {
 }
 
 section h1 {
+    font-size: 2rem;
     text-align: center;
-    margin: 2rem auto;
+    margin: 1rem auto;
 }
 
 .container-promos, .container-bookings {
@@ -159,16 +120,17 @@ section h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .container-bookings form {
     width: 60%;
 }
 
+
 .container-bookings table {
     width: 40%;
 }
-
 
 .container-pricing {
     width: 80%;
@@ -208,7 +170,7 @@ section h1 {
     font-size: 1.5rem;
 }
 
-.container-pricing .cabin-data p {
+.container-pricing .cabin-data > p {
     font-size: 1rem;
 }
 
@@ -216,13 +178,18 @@ section h1 {
     margin: 0.5rem 0;
     font-size: 1rem;
     font-weight: bold;
-    color: #ffd23f;
+    color: #ffba08;
 }
 
 .container-pricing .cabin-data .call-action {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.call-action > p {
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .section-boxPromo {
@@ -236,11 +203,38 @@ section h1 {
     grid-auto-flow: row;
     gap: 0.5rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, minmax(5rem, auto));
+    grid-template-rows: repeat(2, 15rem);
 }
 
 .section-boxPromoGallery .grid-item {
     background-color: #7D8491;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.section-boxPromoGallery .grid-item.rustica1 {
+    background-image: url('images/promo-rustica-1.jpg');
+}
+
+.section-boxPromoGallery .grid-item.rustica2 {
+    background-image: url('images/promo-rustica-2.jpg');
+}
+
+.section-boxPromoGallery .grid-item.rustica3 {
+    background-image: url('images/promo-rustica-3.jpg');
+}
+
+.section-boxPromoGallery .grid-item.unplugged1 {
+    background-image: url('images/promo-unplugged-1.jpg');
+}
+
+.section-boxPromoGallery .grid-item.unplugged2 {
+    background-image: url('images/promo-unplugged-2.jpg');
+}
+
+.section-boxPromoGallery .grid-item.unplugged3 {
+    background-image: url('images/promo-unplugged-3.jpg');
 }
 
 .grid-horizontal .grid-item:nth-child(1) {
@@ -267,6 +261,7 @@ section h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .section-boxPromoValidity span {
@@ -281,25 +276,87 @@ section h1 {
 }
 
 
-
-
-
-
-
-/* Footer */
-
-/* Forms */
-label {
-    margin-bottom: 0.5em;
+/* Flexbox */
+.flex {
+    display: flex;
 }
 
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.content-between {
+    align-content: space-between;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.flex-item {
+    margin-right: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.flex-grow {
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.items-stretch {
+    align-items: stretch;
+}
+
+.items-center {
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #FFF;
+}
+
+/* Forms */
 button, input, select, textarea {
     font-family: inherit;
     font-size: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid #403F4C;
+    border-radius: 8px;
+    padding: 0.25rem 0.5rem;
 }
+
+button {
+    margin: 0 0.5rem;
+    padding: 0.25rem 0.5rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    margin: 0.5rem;
+}
+
+label {
+    margin-bottom: 0.3rem;
+}
+
 
 /* Tables */
 table {

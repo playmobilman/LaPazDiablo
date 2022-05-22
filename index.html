@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="styles.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mallanna&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main-container">
@@ -53,32 +55,36 @@
             <div class="container-promos">
                 <div class="section-boxPromo">
                     <div class="section-boxPromoGallery grid-horizontal">
-                        <div class="grid-item">1</div>
-                        <div class="grid-item">2</div>
-                        <div class="grid-item">3</div>
+                        <div class="grid-item rustica1"></div>
+                        <div class="grid-item rustica2"></div>
+                        <div class="grid-item rustica3"></div>
                     </div>
-                    <div class="section-boxPromoResume">
-                        <h3>Titulo promo 1</h3>
-                        <p>Lipsum dolor sit amet</p>
-                    </div>
-                    <div class="section-boxPromoValidity">
-                        <span>Vigencia del 21/05/2022 al 31/05/2022</span>
-                        <button type="button">AMPLIAR</button>
+                    <div class="flex flex-col" style="margin-top: auto; padding-top: 1.2rem;">
+                        <div class="section-boxPromoResume">
+                            <h3>Promo "R&uacute;stica"</h3>
+                            <p>Disfruta de toda la naturaleza destacada de Punta del Diablo en nuestras posadas enclavadas al pie del bosque nativo.</p>
+                        </div>
+                        <div class="section-boxPromoValidity">
+                            <span>Vigencia del 21/05/2022 al 31/05/2022</span>
+                            <button type="button">AMPLIAR</button>
+                        </div>
                     </div>
                 </div>
                 <div class="section-boxPromo">
                     <div class="section-boxPromoGallery grid-vertical">
-                        <div class="grid-item">1</div>
-                        <div class="grid-item">2</div>
-                        <div class="grid-item">3</div>
+                        <div class="grid-item unplugged1"></div>
+                        <div class="grid-item unplugged2"></div>
+                        <div class="grid-item unplugged3"></div>
                     </div>
-                    <div class="section-boxPromoResume">
-                        <h3>Titulo promo 2</h3>
-                        <p>Lipsum dolor sit amet</p>
-                    </div>
-                    <div class="section-boxPromoValidity">
-                        <span>Vigencia del 21/05/2022 al 31/05/2022</span>
-                        <button type="button">AMPLIAR</button>
+                    <div class="flex flex-col" style="margin-top: auto; padding-top: 1.2rem;">
+                        <div class="section-boxPromoResume">
+                            <h3>Promo "Unplugged"</h3>
+                            <p>Desenchufate de la rutina y viv&iacute; una experiencia natural en nuestra caba&ntilde;a "Scent".</p>
+                        </div>
+                        <div class="section-boxPromoValidity">
+                            <span>Vigencia del 21/05/2022 al 31/05/2022</span>
+                            <button type="button">AMPLIAR</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -102,11 +108,7 @@
                         </p>
                         <p class="rating">4.5 - Genial</p>
                         <div class="call-action">
-                            <span>
-                                <strong>
-                                    Noche - U$S 41
-                                </strong>
-                            </span>
+                            <p>Noche - U$S 41</p>
                             <button type="button">AMPLIAR</button>
                         </div>
                     </div>
@@ -127,9 +129,7 @@
                         </p>
                         <p class="rating">5 - Excelente</p>
                         <div class="call-action">
-                            <span>
-                                <strong>Noche - U$S 43</strong>
-                            </span>
+                            <p>Noche - U$S 43</p>
                             <button type="button">AMPLIAR</button>
                         </div>
                     </div>
@@ -149,9 +149,7 @@
                         </p>
                         <p class="rating">4 - Recomendada</p>
                         <div class="call-action">
-                            <span>
-                                <strong>Noche - U$S 39</strong>
-                            </span>
+                            <p>Noche - U$S 39</p>
                             <button type="button">AMPLIAR</button>
                         </div>
                     </div>
@@ -171,9 +169,7 @@
                         </p>
                         <p class="rating">4.5 - Genial</p>
                         <div class="call-action">
-                            <span>
-                                <strong>Noche - U$S 35</strong>
-                            </span>
+                            <p>Noche - U$S 35</p>
                             <button type="button">AMPLIAR</button>
                         </div>
                     </div>
@@ -185,23 +181,21 @@
         <section id="bookings">
             <h1 class="section-title">Haz tu reserva ahora!</h1>
             <div class="container-bookings">
-                <form action="#" method="post">
-                    <div class="flex-row">
-                        
-                        <!-- Datos visitante -->
-                        <div class="flex-col">
-                            <div class="flex-row between">
-                                <div class="flex-col item">
+                <form action="#">
+                    <div class="flex flex-row justify-start">
+                        <div class="flex flex-col">
+                            <div class="flex flex-row">
+                                <div class="flex flex-col flex-item">
                                     <label for="txtNombre">Nombre y apellido (*)</label>
                                     <input type="text" id="txtNombre" required="required">
                                 </div>
-                                <div class="flex-col item">
+                                <div class="flex flex-col flex-item">
                                     <label for="txtQty">Cantidad de personas (*)</label>
                                     <input type="text" id="txtQty" required="required">
                                 </div>
                             </div>
-                            <div class="flex-row-fluid">
-                                <div class="flex-col item">
+                            <div class="flex flex-row">
+                                <div class="flex flex-col flex-item flex-grow">
                                     <label for="slcTipoAlojamiento">Tipo de alojamiento (*)</label>
                                     <select name="slcTipoAlojamiento" id="slcTipoAlojamiento" required="required">
                                         <option value="">Seleccione...</option>
@@ -211,77 +205,26 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Forma de pago -->
-                        <div class="flex-col" style="margin-left: 1.5em; align-content: stretch;">
-                            <label for="slcTipoAlojamiento">Forma de pago</label>
-                            <div class="flex-row">
-                                <label for="rdCredit">
-                                    <input type="radio" id="rdCredit" name="payment" value="payCredit" checked>
-                                    Cr&eacute;dito
-                                </label>
-                                <label for="rdDebit">
-                                    <input type="radio" id="rdDebit" name="payment" value="payDebit" checked>
-                                    D&eacute;bito
-                                </label>
+                        <div class="flex flex-col justify-between">
+                            <div class="flex flex-col">
+                                <label>Forma de pago</label>
+                                <div class="flex flex-row">
+                                    <label for="rdCredit">
+                                        <input type="radio" id="rdCredit" name="payment" value="payCredit" checked>
+                                        Cr&eacute;dito
+                                    </label>
+                                    <label for="rdDebit">
+                                        <input type="radio" id="rdDebit" name="payment" value="payDebit" checked>
+                                        D&eacute;bito
+                                    </label>
+                                </div>
                             </div>
-                            <div class="flex-row between">
+                            <div class="flex flex-row flex-item items-center">
                                 <label><input type="checkbox" id="cbox1" value="first_checkbox">Mascota</label>
                                 <button name="button">Reservar!</button>
                             </div>
                         </div>
                     </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    <!-- <div class="flex-row">
-                        <div class="flex-col item">
-                            <label for="txtNombre">Nombre y apellido (*)</label>
-                            <input type="text" id="txtNombre" required="required">
-                        </div>
-                        <div class="flex-col item">
-                            <label for="txtQty">Cantidad de personas (*)</label>
-                            <input type="text" id="txtQty" required="required">
-                        </div>
-                        <div class="flex-col">
-                            <label for="txtQty">Forma de pago</label>
-                            <div class="flex-row">
-                                <label for="rdCredit">
-                                    <input type="radio" id="rdCredit" name="payment" value="payCredit" checked>
-                                    Cr&eacute;dito
-                                </label>
-                                <label for="rdDebit">
-                                    <input type="radio" id="rdDebit" name="payment" value="payDebit" checked>
-                                    D&eacute;bito
-                                </label>    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-row-full">
-                        <div class="flex-col item">
-                            <label for="slcTipoAlojamiento">Tipo de alojamiento (*)</label>
-                            <select name="slcTipoAlojamiento" id="slcTipoAlojamiento">
-                                <option value="-1">Seleccione...</option>
-                                <option value="1">Cabaña simple</option>
-                                <option value="2">Cabaña duplex</option>
-                            </select>
-                        </div>
-                    </div> -->
                 </form>
                 <table>
                     <thead>
@@ -321,9 +264,12 @@
                 </table>
             </div>
         </section>
+
         <!-- Footer -->
         <footer>
-
+            <a href="www.booking.com">Booking.com</a>
+            <a href="www.airbnb.com">Airbnb</a>
+            <a href="www.instagram.com/playmobilman">Seguinos!</a>
         </footer>
     </div>
 </body>
