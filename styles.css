@@ -17,6 +17,11 @@ body {
     font-family: 'Pontano Sans', sans-serif;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 section {
     background-color: #FCFBF4;
 }
@@ -33,7 +38,7 @@ section {
 
 /* Tipografia */
 p {
-    line-height: 1.2em;
+    font-size: 1.5rem;
 }
 
 /* Headings */
@@ -54,7 +59,26 @@ header img {
     width: 50%;
 }
 
-/* Links */
+/* Transitions / Keyframes */
+@keyframes pulseInfinite {
+    0% {
+        margin-top: 0;
+    }
+    50% {
+        margin-top: 20px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes toColor {
+    0%    { -webkit-filter: grayscale(100%); filter: grayscale(100%); }
+    25%   { -webkit-filter: grayscale(75%); filter: grayscale(75%); }
+    50%   { -webkit-filter: grayscale(50%); filter: grayscale(50%); }
+    75%   { -webkit-filter: grayscale(25%); filter: grayscale(25%); }
+    100%  { -webkit-filter: grayscale(0%); filter: grayscale(0%); }
+}
 
 /* Navigation */
 nav ul {
@@ -86,6 +110,30 @@ nav ul li a:hover {
     background-color: #252323;
 }
 
+.down-arrow {
+    position: absolute;
+    top: calc(100vh - 80px);
+    left: calc(50% - 14px);
+    width: 0;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 2px;
+    animation: pulseInfinite 1.5s infinite;
+}
+
+.down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+}
+
 /* Main content */
 .hero {
     width: 100%;
@@ -114,6 +162,10 @@ section h1 {
     margin: 1rem auto;
 }
 
+#bookings {
+    background: url("/images/wood-texture.jpg") repeat-x top left;
+}
+
 .container-promos, .container-bookings {
     width: 95%;
     margin: 2rem auto;
@@ -126,7 +178,6 @@ section h1 {
 .container-bookings form {
     width: 60%;
 }
-
 
 .container-bookings table {
     width: 40%;
@@ -276,7 +327,7 @@ section h1 {
 }
 
 
-/* Flexbox */
+/* Utilidades Flexbox */
 .flex {
     display: flex;
 }
@@ -301,6 +352,10 @@ section h1 {
     justify-content: flex-start;
 }
 
+.justify-end {
+    justify-content: flex-end;
+}
+
 .flex-item {
     margin-right: 1.2rem;
     margin-bottom: 1.2rem;
@@ -309,7 +364,6 @@ section h1 {
 .flex-grow {
     flex: 1;
     justify-content: center;
-    flex-direction: column;
 }
 
 .items-stretch {
@@ -324,12 +378,29 @@ section h1 {
 footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
     width: 1200px;
     margin: 0 auto;
     background-color: #FFF;
+}
+
+footer a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+footer a img {
+    width: 22%;
+}
+
+footer .logo-ig {
+    text-align: right;
+}
+
+footer .logo-ig a img {
+    width: 8%;
 }
 
 /* Forms */
@@ -354,7 +425,15 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 label {
+    font-weight: bold;
     margin-bottom: 0.3rem;
+}
+
+input::-moz-placeholder,
+input::-webkit-input-placeholder,
+input:-ms-input-placeholder,
+input::placeholder {
+    color: #93a3b1;
 }
 
 

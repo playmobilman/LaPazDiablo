@@ -14,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pontano+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6fe2089104.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main-container">
@@ -40,12 +41,15 @@
         <!-- Hero -->
         <section>
             <div class="hero">
-                <h1>Bienvenidos a La Paz del Diablo!</h1>
+                <h1>Bienvenid@s a La Paz del Diablo!</h1>
                 <p>
-                    Nuestra propuesta de alojamiento se enmarca en los paisajes m&aacute;s pintorescos de la costa este del
-                    Uruguay. Ubicadas estrat&eacute;gicamente en la zona r&uacute;stica de Punta del Diablo, nuestras cabañas
+                    Rel&aacute;jate con nuestra propuesta de alojamiento enmarcada en los paisajes m&aacute;s pintorescos de la costa este del
+                    Uruguay. Estamos ubicados estrat&eacute;gicamente en la zona r&uacute;stica de Punta del Diablo, nuestras cabañas
                     cuentan con todo lo necesario para pasar una estad&iacute;a memorable.
                 </p>
+                <div class="down-arrow">
+                    <a href="#promos">&nbsp;</a>
+                </div>
             </div>
         </section>
 
@@ -187,18 +191,18 @@
                             <div class="flex flex-row">
                                 <div class="flex flex-col flex-item">
                                     <label for="txtNombre">Nombre y apellido (*)</label>
-                                    <input type="text" id="txtNombre" required="required">
+                                    <input type="text" id="txtNombre" placeholder="ej.: Matias Schmid"required="required">
                                 </div>
                                 <div class="flex flex-col flex-item">
                                     <label for="txtQty">Cantidad de personas (*)</label>
-                                    <input type="text" id="txtQty" required="required">
+                                    <input type="number" id="txtQty" placeholder="ej.: 2"required="required=">
                                 </div>
                             </div>
                             <div class="flex flex-row">
                                 <div class="flex flex-col flex-item flex-grow">
                                     <label for="slcTipoAlojamiento">Tipo de alojamiento (*)</label>
                                     <select name="slcTipoAlojamiento" id="slcTipoAlojamiento" required="required">
-                                        <option value="">Seleccione...</option>
+                                        <option selected>Selecciona...</option>
                                         <option value="1">Cabaña simple</option>
                                         <option value="2">Cabaña duplex</option>
                                     </select>
@@ -267,9 +271,20 @@
 
         <!-- Footer -->
         <footer>
-            <a href="www.booking.com">Booking.com</a>
-            <a href="www.airbnb.com">Airbnb</a>
-            <a href="www.instagram.com/playmobilman">Seguinos!</a>
+            <div class="flex flex-row justify-between">
+                <a href="https://www.booking.com/searchresults.es.html?ss=la+paz+del+diablo&ssne=Punta+del+Diablo&ssne_untouched=Punta+del+Diablo&label=la-paz-del-diablo-i-y-ii-q*3F91mXxBtqQ5kHaASNKAS201222608293%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-58882601403%3Alp1012872%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9Ybz4KBg0DTFCp_luKAHRTJg&sid=308e8e5617a69ab9981addf247acd6c9&aid=311839&highlighted_hotels=730592&lang=es&sb=1&src_elem=sb&src=searchresults&dest_id=ChIJCzdjfkktc5URasd-RtfC9bA&dest_type=landmark&place_id=ChIJCzdjfkktc5URasd-RtfC9bA&latitude=-34.0414989&longitude=-53.5474662&ac_position=0&ac_click_type=g&ac_langcode=es&ac_suggestion_list_length=1&search_selected=true&search_pageview_id=6be6098359c30232&group_adults=2&no_rooms=1&group_children=0&sb_travel_purpose=leisure">
+                    <img src="/images/logo-booking.svg" alt="Logo de Booking.com" title="Booking.com">
+                </a>
+                <a href="https://www.airbnb.com/">
+                    <img src="/images/logo-airbnb.svg" alt="Logo de Airbnb" title="Airbnb.com">
+                </a>
+            </div>
+            <div class="flex-grow"></div>
+            <div class="flex flex-row logo-ig justify-between">
+                <a href="https://www.instagram.com/portaldeldiablo/">
+                    <img src="/images/logo-instagram.svg" alt="Logo de Instagram" title="Instagram.com">
+                </a>
+            </div>
         </footer>
     </div>
 </body>
