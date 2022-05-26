@@ -234,13 +234,29 @@ section h1 {
 
 .container-pricing .cabin-data .call-action {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
 }
 
 .call-action > p {
     font-size: 1.2em;
     font-weight: bold;
+}
+
+.call-action > a {
+    margin-top: 1rem;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.call-action > a:hover {
+    color: #424c55;
+    margin-top: 1rem;
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: all 0.2s;
 }
 
 .section-boxPromo {
@@ -411,13 +427,36 @@ button, input, select, textarea {
     padding: 0;
     box-sizing: border-box;
     border: 1px solid #403F4C;
-    border-radius: 8px;
+    border-radius: 4px;
     padding: 0.25rem 0.5rem;
 }
 
 button {
     margin: 0 0.5rem;
     padding: 0.25rem 0.5rem;
+}
+
+a.button {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: inherit;
+    font-weight: 300;
+    color:#FFFFFF;
+    background-color:#4eb5f1;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+a.button:hover {
+    background-color:#5e4ae3;
+}
+
+a.button:active {
+    background-color: #05299e;
 }
 
 input[type="radio"], input[type="checkbox"] {
@@ -427,6 +466,33 @@ input[type="radio"], input[type="checkbox"] {
 label {
     font-weight: bold;
     margin-bottom: 0.3rem;
+}
+
+.submit-button {
+    background-color: #f5f2b8;
+    padding: .2rem .4rem;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 4px;
+    color: #424c55;
+    font-family: inherit;
+    font-size: 1.5rem;
+    text-decoration: none;
+    border: 1px solid transparent;
+    margin-top: 1.8rem;
+}
+
+.submit-button:hover {
+    border: none;
+    background: #ff9b42;
+    color: #FFF;
+    border: 1px solid #ff9b42;
+    box-shadow: 0px 0px 1px #777;
+    transition: all 0.2s;
+}
+
+.submit-button:active {
+    background: #aa5042;
 }
 
 input::-moz-placeholder,
@@ -456,9 +522,5 @@ table th, table td {
 
 table tr:nth-child(even) { background: #ccc; }
 table tr:nth-child(odd) { background: #fafafa; }
-
-
-
-
 
 /* Misc */
